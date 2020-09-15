@@ -1,0 +1,24 @@
+﻿<Window x:Class="pra.streams02.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pra.streams02.WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="850" Loaded="Window_Loaded">
+    <Grid>
+        <TextBox x:Name="txtContent" AcceptsReturn="True" AcceptsTab="True" HorizontalAlignment="Left" Height="294" Margin="15,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="328" VerticalScrollBarVisibility="Auto"/>
+        <Label Content="Inhoud" HorizontalAlignment="Left" Margin="15,67,0,0" VerticalAlignment="Top" Width="141"/>
+        <Button x:Name="btnReadFile" Content="Lees bestand" HorizontalAlignment="Left" Margin="675,96,0,0" VerticalAlignment="Top" Width="115" Height="28" Click="btnReadFile_Click"/>
+        <Label Content="Beschikbare bestanden : " HorizontalAlignment="Left" Margin="366,98,0,0" VerticalAlignment="Top" Width="139"/>
+        <TextBlock x:Name="tbkFeedback"  Margin="366,245,60,142" TextWrapping="Wrap" Background="#FFF90404" Foreground="White" Padding="10"/>
+        <Label Content="Operationel karakterset" HorizontalAlignment="Left" Margin="15,12,0,0" VerticalAlignment="Top" Width="156"/>
+        <ComboBox x:Name="cmbEncoding" HorizontalAlignment="Left" FontSize="12pt" Margin="189,14,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmbEncoding_SelectionChanged"/>
+        <ComboBox x:Name="cmbFiles" HorizontalAlignment="Left" Height="23" Margin="510,99,0,0" VerticalAlignment="Top" Width="157" RenderTransformOrigin="0.424,0.406" SelectionChanged="cmbFiles_SelectionChanged"/>
+        <Label Content="Nieuwe bestandsnaam : " HorizontalAlignment="Left" Margin="366,145,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.404,-1.289"/>
+        <TextBox x:Name="txtNewFileName" HorizontalAlignment="Left" Height="26" Margin="515,145,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="152"/>
+        <Button x:Name="btnWriteFile" Content="Schrijf bestand" HorizontalAlignment="Left" Height="30" Margin="675,143,0,0" VerticalAlignment="Top" Width="115" Click="btnWriteFile_Click"/>
+        <Button x:Name="btnOverWriteFile" Content="Overschrijf bestand" HorizontalAlignment="Left" Height="30" Margin="675,178,0,0" VerticalAlignment="Top" Width="115" Click="btnOverWriteFile_Click"/>
+
+    </Grid>
+</Window>
