@@ -5,7 +5,7 @@ using System.Text;
 namespace pra.streams02.LIB
 {
 
-    // https://docs.microsoft.com/en-us/dotnet/api/system.text.encoding.getencodings?view=netcore-3.1 
+
 
     public class EncodingEntity
     {

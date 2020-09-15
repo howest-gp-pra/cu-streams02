@@ -13,7 +13,6 @@ namespace pra.streams02.LIB
             if (encoding == null) encoding = Encoding.Default;
             if (!Directory.Exists(path))
                 throw new Exception($"Het opgegeven pad {path} bestaat niet!");
-
             string fullPath = path + "\\" + fileName;
 
             if (!overWrite)
@@ -30,13 +29,10 @@ namespace pra.streams02.LIB
                 catch
                 {
                     throw new Exception($"De bestandsnaam {fileName} in de map {path} is momenteel in gebruik.\nProbeer later opnieuw");
-
                 }
             }
-
             try
             {
-
                 using (FileStream fileStream = new FileStream(fullPath, FileMode.Create, FileAccess.Write))
                 {
                     using (StreamWriter streamWriter = new StreamWriter(fileStream, encoding))
@@ -51,37 +47,9 @@ namespace pra.streams02.LIB
             {
                 throw new Exception($"Er is een fout opgetreden. {e.Message}");
             }
-
             return successfull;
         }
 
-        //public static bool WriteStringToFile(string content, string path, string fileName, Encoding encoding)
-        //{
-        //    bool isSuccessfullyWritten;
-        //    string fullPath;
-        //    fullPath = path + "\\" + fileName;
-
-        //    try
-        //    {
-        //        using (StreamWriter streamWriter = new StreamWriter(fullPath,encoding))
-        //        {
-        //            streamWriter.Write(content);
-        //            streamWriter.Close();
-        //        }
-        //        isSuccessfullyWritten = true;
-        //    }
-        //    catch (IOException)
-        //    {
-        //        throw new IOException($"Het bestand {fullPath} kan niet weggeschreven worden.\n" +
-        //                        $"Probeer het geopende bestand op die locatie te sluiten.");
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        throw new Exception($"Er is een fout opgetreden. {e.Message}");
-        //    }
-
-        //    return isSuccessfullyWritten;
-        //}
-
+ 
     }
 }

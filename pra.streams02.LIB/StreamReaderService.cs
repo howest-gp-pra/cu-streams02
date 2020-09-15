@@ -15,7 +15,6 @@ namespace pra.streams02.LIB
             {
                 encoding = Encoding.UTF8;
             }
-
             try
             {
                 using (StreamReader streamReader = new StreamReader(filePath, encoding))
@@ -31,7 +30,6 @@ namespace pra.streams02.LIB
             {
                 throw new Exception($"Er is een fout opgetreden. {e.Message}");
             }
-
             return fileContent;
         }
     }

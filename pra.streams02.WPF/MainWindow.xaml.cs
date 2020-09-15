@@ -17,9 +17,7 @@ using pra.streams02.LIB;
 
 namespace pra.streams02.WPF
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -36,7 +34,6 @@ namespace pra.streams02.WPF
                 tbkFeedback.Background = new SolidColorBrush(Color.FromRgb(0, 200, 0));
             else
                 tbkFeedback.Background = new SolidColorBrush(Color.FromRgb(200, 0, 0));
-
         }
         void GetFilesInAssets()
         {
@@ -76,8 +73,6 @@ namespace pra.streams02.WPF
             {
                 ShowFeedback(ex.Message);
             }
-
-
         }
 
         private void cmbFiles_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -93,7 +88,6 @@ namespace pra.streams02.WPF
             txtContent.Text = "";
             tbkFeedback.Text = "";
             tbkFeedback.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
-
         }
 
         private void btnWriteFile_Click(object sender, RoutedEventArgs e)
