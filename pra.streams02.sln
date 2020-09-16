@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pra.streams02.WPF", "pra.streams02.WPF\pra.streams02.WPF.csproj", "{6AD9E5E5-0415-4FD7-AC1F-DFE4EB9CF3D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pra.streams02.LIB", "pra.streams02.LIB\pra.streams02.LIB.csproj", "{9B3AE4F7-FFF8-46E7-A1B2-3A0983F4A83D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pra.streams02.CORE", "pra.streams02.CORE\pra.streams02.CORE.csproj", "{9B3AE4F7-FFF8-46E7-A1B2-3A0983F4A83D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

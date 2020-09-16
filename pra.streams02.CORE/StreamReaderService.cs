@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace pra.streams02.LIB
+namespace pra.streams02.CORE
 {
     public class StreamReaderService
     {
