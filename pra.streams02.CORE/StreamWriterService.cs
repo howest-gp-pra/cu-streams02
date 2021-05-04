@@ -38,7 +38,6 @@ namespace pra.streams02.CORE
                     using (StreamWriter streamWriter = new StreamWriter(fileStream, encoding))
                     {
                         streamWriter.Write(content);
-                        streamWriter.Close();
                     }
                 }
                 successfull = true;
