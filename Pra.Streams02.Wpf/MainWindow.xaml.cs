@@ -56,7 +56,7 @@ namespace Pra.Streams02.Wpf
             cmbFiles.SelectedIndex = 0;
         }
 
-        private void btnReadFile_Click(object sender, RoutedEventArgs e)
+        private void BtnReadFile_Click(object sender, RoutedEventArgs e)
         {
             txtContent.Text = "";
             tbkFeedback.Text = "";
@@ -77,7 +77,7 @@ namespace Pra.Streams02.Wpf
             }
         }
 
-        private void cmbFiles_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void CmbFiles_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             txtContent.Text = "";
             tbkFeedback.Text = "";
@@ -85,18 +85,18 @@ namespace Pra.Streams02.Wpf
             txtNewFileName.Text = (string)cmbFiles.SelectedItem;
         }
 
-        private void cmbEncoding_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void CmbEncoding_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             txtContent.Text = "";
             tbkFeedback.Text = "";
             tbkFeedback.Background = new SolidColorBrush(Color.FromRgb(255, 255, 255));
         }
 
-        private void btnWriteFile_Click(object sender, RoutedEventArgs e)
+        private void BtnWriteFile_Click(object sender, RoutedEventArgs e)
         {
             WriteFile(false);
         }
-        private void btnOverWriteFile_Click(object sender, RoutedEventArgs e)
+        private void BtnOverWriteFile_Click(object sender, RoutedEventArgs e)
         {
             WriteFile(true);
         }
@@ -121,7 +121,7 @@ namespace Pra.Streams02.Wpf
                 StreamWriterService.WriteStringToFile(content, di.FullName, fileName, encodingEntity.CharacterSet, overWriteExistingFile);
                 GetFilesInAssets();
                 cmbFiles.SelectedItem = fileName;
-                btnReadFile_Click(null, null);
+                BtnReadFile_Click(null, null);
                 ShowFeedback($"Bestand {fileName} werd succesvol weggeschreven in {encodingEntity.CharacterSetName}", true);
             }
             catch (Exception ex)
