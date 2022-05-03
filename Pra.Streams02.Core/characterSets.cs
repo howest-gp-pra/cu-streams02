@@ -2,11 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace pra.streams02.CORE
+namespace Pra.Streams02.Core
 {
-
-
-
     public class EncodingEntity
     {
         public Encoding CharacterSet { get; }
@@ -21,6 +18,7 @@ namespace pra.streams02.CORE
             return CharacterSetName;
         }
     }
+
     public class EncodingService
     {
         public List<EncodingEntity> AvailableCharSets { get; set; }
@@ -30,6 +28,5 @@ namespace pra.streams02.CORE
             AvailableCharSets.Add(new EncodingEntity(Encoding.UTF8, "UTF-8"));
             AvailableCharSets.Add(new EncodingEntity(Encoding.GetEncoding("iso-8859-1"), "Ansi"));
         }
-
     }
 }

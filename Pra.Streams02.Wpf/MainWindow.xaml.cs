@@ -13,18 +13,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using pra.streams02.CORE;
+using Pra.Streams02.Core;
 
-namespace pra.streams02.WPF
+namespace Pra.Streams02.Wpf
 {
 
     public partial class MainWindow : Window
     {
+        string AssetPath = @"../../../Assets/";
+
         public MainWindow()
         {
             InitializeComponent();
         }
-        string AssetPath = @"../../../Assets/";
 
         void ShowFeedback(string message, bool isSucces = false)
         {
@@ -35,6 +36,7 @@ namespace pra.streams02.WPF
             else
                 tbkFeedback.Background = new SolidColorBrush(Color.FromRgb(200, 0, 0));
         }
+
         void GetFilesInAssets()
         {
             cmbFiles.Items.Clear();
@@ -127,7 +129,5 @@ namespace pra.streams02.WPF
                 ShowFeedback(ex.Message);
             }
         }
-
-
     }
 }
